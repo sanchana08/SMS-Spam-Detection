@@ -1,32 +1,14 @@
-# 📩 SMS Spam Detection
+# SMS Spam Detection
 
 A machine learning project that classifies SMS messages as **spam** or **ham (not spam)** using six different classifiers. The project uses TF-IDF vectorization for feature extraction and SMOTE to handle class imbalance.
 
----
 
-## 🗂️ Project Structure
-
-```
-sms-spam-detection/
-├── SMS_Spam_Detection.ipynb   # Main notebook
-├── predict.py                 # CLI script to classify a message
-├── requirements.txt           # Python dependencies
-├── models/                    # Saved model artifacts (generated after training)
-│   ├── best_model.pkl
-│   └── tfidf_vectorizer.pkl
-├── data/
-│   └── spam.csv               # Dataset (download separately — see below)
-└── .gitignore
-```
-
----
-
-## 📊 Dataset
+## Dataset
 
 **SMS Spam Collection Dataset** — 5,572 labelled SMS messages (ham / spam).
 
 Download it from Kaggle and place it at `data/spam.csv`:  
-🔗 https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset
+https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset
 
 | Label | Count |
 |-------|-------|
@@ -35,7 +17,7 @@ Download it from Kaggle and place it at `data/spam.csv`:
 
 ---
 
-## 🤖 Models Compared
+## Models Compared
 
 | Model               | Accuracy  |
 |---------------------|-----------|
@@ -46,11 +28,14 @@ Download it from Kaggle and place it at `data/spam.csv`:
 | **SVM (Linear)**    | **~98.2 %** |
 | Random Forest       | ~97.8 %   |
 
+<img width="1048" height="662" alt="Comparison" src="https://github.com/user-attachments/assets/75a3a442-1d98-4ee5-8cf9-3325dd359a7d" />
+
+
 > Results may vary slightly due to random state.
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ### 1 — Clone the repository
 ```bash
@@ -72,21 +57,21 @@ Trained artifacts are saved to the `models/` folder.
 
 ---
 
-## 🚀 Quick Predict (CLI)
+## Quick Predict (CLI)
 
 After training, you can classify a message from the command line:
 
 ```bash
 python predict.py "Congratulations! You won a free prize, claim now!"
-# → SPAM 🚨
+# → SPAM 
 
 python predict.py "Are you free for dinner tonight?"
-# → HAM ✅
+# → HAM 
 ```
 
 ---
 
-## 🔍 Methodology
+##  Methodology
 
 1. **Load** the SMS Spam Collection dataset.
 2. **Encode** labels (`ham → 0`, `spam → 1`).
@@ -98,7 +83,7 @@ python predict.py "Are you free for dinner tonight?"
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 See `requirements.txt`. Key packages:
 
@@ -110,6 +95,6 @@ See `requirements.txt`. Key packages:
 
 ---
 
-## 📄 License
+## License
 
 MIT
