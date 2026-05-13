@@ -95,6 +95,3 @@ See `requirements.txt`. Key packages:
 
 ---
 
-## License
-
-MIT
